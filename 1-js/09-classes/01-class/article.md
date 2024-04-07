@@ -1,22 +1,22 @@
 
-# Class basic syntax
+# Klasse: Die grundlegende Syntax
 
 ```quote author="Wikipedia"
-In object-oriented programming, a *class* is an extensible program-code-template for creating objects, providing initial values for state (member variables) and implementations of behavior (member functions or methods).
+In der objektorientierten Programmierung ist eine Klasse eine erweiterbare Programmcode-Vorlage für die Erstellung von Objekten, die Initialwerte für den Zustand (Klassenvariablen) und Implementierungen des Verhaltens (Klassenfunktionen oder -methoden) bereitstellt.
 ```
 
-In practice, we often need to create many objects of the same kind, like users, or goods or whatever.
+In der Praxis müssen wir oft viele Objekte der gleichen Art erstellen, wie z.B. Benutzer oder Produkte oder was auch immer.
 
-As we already know from the chapter <info:constructor-new>, `new function` can help with that.
+Wie wir bereits aus dem Kapitel <info:constructor-new> wissen, kann `new function` dabei helfen.
 
-But in the modern JavaScript, there's a more advanced "class" construct, that introduces great new features which are useful for object-oriented programming.
+Allerdings gibt es im modernen JavaScript ein fortschrittlicheres "Klassen"-Konstrukt, das großartige neue Funktionen bietet, die für die objektorientierte Programmierung nützlich sind.
 
-## The "class" syntax
+## Die "class" Syntax
 
-The basic syntax is:
+Die grundlegende Syntax ist:
 ```js
 class MyClass {
-  // class methods
+  // Methoden der Klasse
   constructor() { ... }
   method1() { ... }
   method2() { ... }
@@ -25,11 +25,11 @@ class MyClass {
 }
 ```
 
-Then use `new MyClass()` to create a new object with all the listed methods.
+Anschließend verwenden Sie `new MyClass()`, um ein neues Objekt mit allen aufgeführten Methoden zu erstellen.
 
-The `constructor()` method is called automatically by `new`, so we can initialize the object there.
+Die Methode `constructor()` wird automatisch von `new` aufgerufen, so dass wir das Objekt dort initialisieren können.
 
-For example:
+Zum Beispiel:
 
 ```js run
 class User {
@@ -44,16 +44,16 @@ class User {
 
 }
 
-// Usage:
+// Verwendung:
 let user = new User("John");
 user.sayHi();
 ```
 
-When `new User("John")` is called:
-1. A new object is created.
-2. The `constructor` runs with the given argument and assigns it to `this.name`.
+Wenn `new User("John")` aufgerufen wird, wird:
+1. Ein neues Objekt wird erstellt.
+2. Der `constructor` läuft mit dem angegebenen Argument und weist es `this.name` zu.
 
-...Then we can call object methods, such as `user.sayHi()`.
+...Danach können wir Objektmethoden aufrufen, wie z.B. `user.sayHi()`.
 
 
 ```warn header="No comma between class methods"
